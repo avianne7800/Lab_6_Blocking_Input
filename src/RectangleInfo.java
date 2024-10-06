@@ -42,5 +42,7 @@ public class RectangleInfo {
                 in.nextLine();
             }
         }while(!Done);
+        System.out.println("The area of the rectangle is " + (Width * Height) + " and the perimeter is " + (Width*2 + Height*2));
+        System.out.println("The length of the diagonal is " + Math.sqrt(Math.pow(Width, 2) + Math.pow(Height, 2)));
     }
 }
