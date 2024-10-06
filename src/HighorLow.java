@@ -2,12 +2,12 @@ import java.util.Scanner;
 import java.util.Random;
 public class HighorLow {
     public static void main(String[] args) {
-        Scanner in= new Scanner(System.in);
-        int RanNum = 0;
+        Scanner in = new Scanner(System.in);
+        Random random = new Random();
+        int RanNum = random.nextInt(10)+1;
         int Guess = 0;
         boolean Done = false;
         String Trash = "";
-
 
         do
         {
@@ -16,9 +16,21 @@ public class HighorLow {
             {
                 Guess = in.nextInt();
                 in.nextLine();
-                if(Guess >=)
-                {
 
+                if(Guess == RanNum)
+                {
+                    System.out.println("You guessed the number!");
+                    Done = true;
+                }
+                else if(Guess > RanNum)
+                {
+                    System.out.println("Your guess is " + (Guess - RanNum) + " over the number.");
+                    Done = true;
+                }
+                else if(Guess < RanNum)
+                {
+                    System.out.println("Your guess is " + (RanNum - Guess) + " under the number.");
+                    Done = true;
                 }
             }
             else
