@@ -16,21 +16,23 @@ public class HighorLow {
             {
                 Guess = in.nextInt();
                 in.nextLine();
-
-                if(Guess == RanNum)
+                if (Guess > 0 & Guess < 11)
                 {
-                    System.out.println("You guessed the number!");
-                    Done = true;
-                }
-                else if(Guess > RanNum)
-                {
-                    System.out.println("Your guess is " + (Guess - RanNum) + " over the number.");
-                    Done = true;
-                }
-                else if(Guess < RanNum)
-                {
-                    System.out.println("Your guess is " + (RanNum - Guess) + " under the number.");
-                    Done = true;
+                    if(Guess == RanNum)
+                    {
+                        System.out.println("You guessed the number!");
+                        Done = true;
+                    }
+                    else if(Guess > RanNum)
+                    {
+                        System.out.println("Your guess is " + (Guess - RanNum) + " over the number.");
+                        Done = true;
+                    }
+                    else if(Guess < RanNum)
+                    {
+                        System.out.println("Your guess is " + (RanNum - Guess) + " under the number.");
+                        Done = true;
+                    }
                 }
             }
             else
