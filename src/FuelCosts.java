@@ -5,6 +5,8 @@ public class FuelCosts {
         double GInTank = 0;
         double MilesPerG = 0;
         double PricePerG = 0;
+        double Distance = 0;
+        double FinalCost = 0;
         boolean Done = false;
         String Trash = "";
 
@@ -28,7 +30,7 @@ public class FuelCosts {
         Done = false;
         do
         {
-            System.out.println("Enter the number of gallons in the tank: ");
+            System.out.println("Enter the Miles Per Gallon: ");
             if(in.hasNextDouble())
             {
                 MilesPerG = in.nextDouble();
@@ -46,7 +48,7 @@ public class FuelCosts {
         Done = false;
         do
         {
-            System.out.println("Enter the number of gallons in the tank: ");
+            System.out.println("Enter the current price per gallon: ");
             if(in.hasNextDouble())
             {
                 PricePerG = in.nextDouble();
@@ -62,6 +64,9 @@ public class FuelCosts {
             }
         }while(!Done);
 
-
+        Distance = MilesPerG * GInTank;
+        FinalCost = (100 / MilesPerG) * PricePerG;
+        System.out.println("It would cost " + FinalCost + " to drive 100 miles.");
+        System.out.println("You can drive " + Distance + " miles with a full tank of gas.");
     }
 }
